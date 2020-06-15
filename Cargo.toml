@@ -1,0 +1,19 @@
+[package]
+name = "easy_rss"
+version = "1.0.3"
+authors = ["MeteorGX <guixin2010@live.cn>"]
+edition = "2018"
+description = "RSS Parser"
+license = "MIT"
+readme = "README.md"
+keywords = ["xml", "rss"]
+documentation = "https://docs.rs/easy_rss"
+repository = "https://github.com/MeteorGX/easy_rss"
+
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+quick-xml = "0.18.1"
+json = "0.12.4"
+reqwest = { version = "0.10.4", features = ["blocking"]}

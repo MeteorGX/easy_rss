@@ -1,6 +1,6 @@
 [package]
 name = "easy_rss"
-version = "1.0.3"
+version = "1.0.1"
 authors = ["MeteorGX <guixin2010@live.cn>"]
 edition = "2018"
 description = "RSS Parser"

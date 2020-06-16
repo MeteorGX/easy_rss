@@ -1,11 +1,11 @@
-# future_rss
+# easy_rss
 
 Use Rust to Serialize the Rss structure.
 
 ### Usage
 
 ```toml
-future_rss = "*"
+easy_rss = "*"
 ```
 
 ### Examples
@@ -13,7 +13,7 @@ future_rss = "*"
 ##### Parse Xml
 
 ```rust
-use future_rss::*;
+use easy_rss::*;
 
 fn main()->Result<(),Box<dyn std::error::Error>> {
     let address = "https://www.zhihu.com/rss";
@@ -28,7 +28,7 @@ fn main()->Result<(),Box<dyn std::error::Error>> {
 #### Parse Web XMl
 
 ```rust
-use future_rss::RssParser;
+use easy_rss::RssParser;
 
 fn main()->Result<(),Box<dyn std::error::Error>> {
     let address = "https://www.zhihu.com/rss";
@@ -42,7 +42,7 @@ fn main()->Result<(),Box<dyn std::error::Error>> {
 #### RSS To Json
 
 ```rust
-use future_rss::RssParser;
+use easy_rss::RssParser;
 
 fn main()->Result<(),Box<dyn std::error::Error>> {
     let address = "https://www.zhihu.com/rss";
@@ -56,7 +56,7 @@ fn main()->Result<(),Box<dyn std::error::Error>> {
 ### Rss Request Builder
 
 ```rust
-use future_rss::RssParser;
+use easy_rss::RssParser;
 
 fn main()->Result<(),Box<dyn std::error::Error>> {
     let address = "https://www.zhihu.com/rss";
@@ -72,4 +72,4 @@ fn main()->Result<(),Box<dyn std::error::Error>> {
 
 ### Advanced
 
-[Examples](https://github.com/MeteorGX/future_rss_examples)
+[Examples](https://github.com/MeteorGX/easy_rss_examples)

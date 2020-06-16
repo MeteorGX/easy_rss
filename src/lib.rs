@@ -2,7 +2,7 @@
 //! Rss Parse Library
 //!
 //! ```
-//! use future_rss::RssParser;
+//! use easy_rss::RssParser;
 //!
 //! fn main()->Result<(),Box<dyn std::error::Error>> {
 //!     let address = "https://www.zhihu.com/rss";
@@ -49,7 +49,7 @@ pub static RSS_DEFAULT_TAG:&'static str = "rss";
 /// Rss Item Node
 ///
 /// ```
-/// use future_rss::RssItem;
+/// use easy_rss::RssItem;
 /// fn main(){
 ///     let item = RssItem::default();
 ///     println!("{:?}",item);
@@ -71,7 +71,7 @@ pub struct RssItem{
 ///
 /// ### Parse Xml
 /// ```
-/// use future_rss::RssParser;
+/// use easy_rss::RssParser;
 ///
 /// fn main()->Result<(),Box<dyn std::error::Error>>{
 ///     let mut parser_default = RssParser::new();
@@ -97,7 +97,7 @@ pub struct RssItem{
 ///
 /// ### Parse Web XMl
 /// ```
-/// use future_rss::RssParser;
+/// use easy_rss::RssParser;
 ///
 /// fn main()->Result<(),Box<dyn std::error::Error>> {
 ///     let address = "https://www.zhihu.com/rss";
@@ -111,7 +111,7 @@ pub struct RssItem{
 ///
 /// ### RSS To Json
 /// ```
-/// use future_rss::RssParser;
+/// use easy_rss::RssParser;
 ///
 /// fn main()->Result<(),Box<dyn std::error::Error>> {
 ///     let address = "https://www.zhihu.com/rss";
@@ -124,7 +124,7 @@ pub struct RssItem{
 ///
 /// ### Rss Request Builder
 /// ```
-/// use future_rss::RssParser;
+/// use easy_rss::RssParser;
 ///
 /// fn main()->Result<(),Box<dyn std::error::Error>> {
 ///     let address = "https://www.zhihu.com/rss";
@@ -366,7 +366,7 @@ mod tests {
     use crate::RssParser;
 
     #[test]
-    fn future_rss_works()->Result<(),Box<dyn std::error::Error>> {
+    fn easy_rss_works()->Result<(),Box<dyn std::error::Error>> {
         let address = "https://www.zhihu.com/rss";
         let mut parser = RssParser::from_url(address,"utf8")?;
         parser.author_tag = String::from("dc:creator");
@@ -376,7 +376,7 @@ mod tests {
     }
 
     #[test]
-    fn future_rss_to_json(){
+    fn easy_rss_to_json(){
         let address = "https://www.zhihu.com/rss";
         let mut parser = RssParser::from_url(address,"utf8").unwrap();
         parser.author_tag = String::from("dc:creator");
@@ -385,7 +385,7 @@ mod tests {
 
 
     #[test]
-    fn future_rss_builder(){
+    fn easy_rss_builder(){
         let mut parser = RssParser::new();
         parser.set_xml(String::from(
             r#"<?xml version="1.0" encoding="UTF-8" ?>
